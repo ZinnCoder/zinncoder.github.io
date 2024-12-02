@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="CSS/styleslog.css">
+    <link rel="icon" href="IMG/icone.png" type="image/x-icon">
+    <!-- Opcional: Também pode adicionar ícones para tamanhos maiores (para dispositivos móveis, por exemplo) -->
+    <link rel="apple-touch-icon" href="IMG/icone.png">
+    <link rel="icon" sizes="192x192" href="IMG/icone.png">
+     <title>Logar e registrar</title>
+</head>
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+       
+        <div class="nav-menu" id="navMenu">
+
+            <ul>
+            <li><a href="index.html" class="link active">Voltar ao Inicio</a></li>
+        </ul>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- login form -------------------------->
+        <form action="termos_condiçoes.html"
+        <div class="login-container" id="login"> 
+            <div class="top">
+                <span>Não tem uma conta? <a href="#" onclick="register()">Criar conta.</a></span>
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Nome de usuário"required>
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Senha"required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Logar">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Vender minha alma ao Teemo.</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Esqueceu a senha?</a></label>
+                </div>
+            </div>
+        </div>
+    </form>
+        <!------------------- registration form -------------------------->
+        <form action="login_register.html"
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Ja tem uma conta? <a href="#" onclick="login()">Login</a></span>
+                <header>Registrar-se.</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Nickname"required>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Nickname parte 2">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email"required>
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Senha"required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Registrar">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Vender minha alma ao Teemo.</label>
+                </div>
+                <div class="two">
+                    <label><a href="termos_condiçoes.html">Termos e condições.</a></label>
+                </div>           
+            </div>
+        </div>
+    </div>
+</div>   
+</form>
+
+
+<script>
+    function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }
+   </script>
+   <script>
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+   </script>
+<script>
+function validateLogin() {
+    let username = document.getElementById('login-username').value.trim();
+    let password = document.getElementById('login-password').value.trim();
+    let valid = true;
+
+    if (!username) {
+        document.getElementById('login-username-error').style.display = 'block';
+        valid = false;
+    } else {
+        document.getElementById('login-username-error').style.display = 'none';
+    }
+
+    if (!password) {
+        document.getElementById('login-password-error').style.display = 'block';
+        valid = false;
+    } else {
+        document.getElementById('login-password-error').style.display = 'none';
+    }
+
+    return valid;
+}
+
+</script>
+<script>
+
+function validateRegister() {
+    let nickname = document.getElementById('register-nickname').value.trim();
+    let nickname2 = document.getElementById('register-nickname2').value.trim();
+    let email = document.getElementById('register-email').value.trim();
+    let password = document.getElementById('register-password').value.trim();
+    let check = document.getElementById('register-check').checked;
+    let valid = true;
+
+    if (!nickname) {
+        document.getElementById('register-nickname-error').style.display = 'block';
+        valid = false;
+    } else {
+        document.getElementById('register-nickname-error').style.display = 'none';
+    }
+
+    if (!nickname2) {
+        document.getElementById('register-nickname2-error').style.display = 'block';
+        valid = false;
+    } else {
+        document.getElementById('register-nickname2-error').style.display = 'none';
+    }
+
+    if (!email) {
+        document.getElementById('register-email-error').style.display = 'block';
+        valid = false;
+    } else {
+        document.getElementById('register-email-error').style.display = 'none';
+    }
+
+    if (!password) {
+        document.getElementById('register-password-error').style.display = 'block';
+        valid = false;
+    } else {
+        document.getElementById('register-password-error').style.display = 'none';
+    }
+
+    if (!check) {
+        document.getElementById('register-check-error').style.display = 'block';
+        valid = false;
+    } else {
+        document.getElementById('register-check-error').style.display = 'none';
+    }
+
+    return valid;
+}
+</script>
+
+</body>
+</html>

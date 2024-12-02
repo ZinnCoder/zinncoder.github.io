@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades | Teemo</title>
+    <link rel="stylesheet" href="CSS/combos.css">
+    <link rel="icon" href="IMG/icone.png" type="image/x-icon">
+    <!-- Opcional: Também pode adicionar ícones para tamanhos maiores (para dispositivos móveis, por exemplo) -->
+    <link rel="apple-touch-icon" href="IMG/icone.png">
+    <link rel="icon" sizes="192x192" href="IMG/icone.png">
+</head>
+<body>
+    <!-- Login/Register Box -->
+    <div class="login-register-box">
+        <a href="login.html">Login</a>
+    </div>
+
+    <!-- Barra de Navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="builds.html">Builds e Runas</a></li>
+                <li><a href="combos.html">Habilidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Combos -->
+    <section class="combos">
+        <h1>Habilidades</h1>
+        <p>Domine as habilidades do Teemo para garantir um desempenho excepcional nas partidas.</p>
+
+        <!-- Imagens clicáveis das habilidades -->
+        <div class="habilidades">
+            <h2>Habilidades do Teemo</h2>
+            <div class="habilidade-img" onclick="showHabilidade(1)">
+                <img src="IMG/PASSIVA.png" alt="Passiva - Guerrilheiro">
+                <p>Passiva - Guerrilheiro</p>
+            </div>
+            <div class="habilidade-img" onclick="showHabilidade(2)">
+                <img src="IMG/Q.png" alt="Q - Dardo Venenoso">
+                <p>Q - Dardo Venenoso</p>
+            </div>
+            <div class="habilidade-img" onclick="showHabilidade(3)">
+                <img src="IMG/W.png" alt="W - Mover Rápido">
+                <p>W - Mover Rápido</p>
+            </div>
+            <div class="habilidade-img" onclick="showHabilidade(4)">
+                <img src="IMG/E.png" alt="E - Tática de Camuflagem">
+                <p>E - Tática de Camuflagem</p>
+            </div>
+            <div class="habilidade-img" onclick="showHabilidade(5)">
+                <img src="img/R.png" alt="R - Armadilha Venenosa">
+                <p>R - Armadilha Venenosa</p>
+            </div>
+        </div>
+
+        <!-- Vídeo e descrição -->
+        <div id="habilidade-conteudo" class="conteudo">
+            <h2 id="habilidade-titulo">Clique em uma habilidade</h2>
+            <div id="habilidade-video" class="video-container">
+                <video id="video" controls>
+                    <source src="" type="video/mp4">
+                    Seu navegador não suporta o formato de vídeo.
+                </video>
+            </div>
+            <p id="habilidade-descricao">Escolha uma habilidade para ver mais detalhes.</p>
+        </div>
+
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Fanpage do Teemo - League of Legends</p>
+    </footer>
+
+    <script src="JS/combos.js"></script>
+
+</body>
+</html>
