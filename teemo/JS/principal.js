@@ -8,5 +8,5 @@
          // document.getElementById('user-avatar').src = 'caminho/para/avatar.jpg';
      } else {
          // Caso o nome de usuário não exista, talvez redirecionar para a página de login
-         window.location.href = 'login.html';
+       //  window.location.href = 'login.html';
      }
