@@ -19,7 +19,7 @@ body {
     padding: 0;
     background-color: var(--dark);
     color: var(--white);
-    background: url('../img/background.jpg') no-repeat;
+    background: url('../IMG/background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 100vh; /* Garantir que o corpo ocupe toda a altura da tela */

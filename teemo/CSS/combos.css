@@ -15,7 +15,7 @@ body {
     padding: 0;
     background-color: var(--dark);
     color: var(--white);
-    background: url('../img/background-combos.jpg') no-repeat;
+    background: url('../IMG/background-combos.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 100vh; /* Garantir que o corpo ocupe toda a altura da tela */
@@ -203,6 +203,13 @@ nav ul li a:hover {
     border-radius: 10px;
     margin: 0 auto; /* Centralizando o vídeo */
 }
+
+#video {
+    height: 350px; /* Definindo uma altura fixa para o vídeo */
+    border-radius: 20px;
+    margin: 0 auto; /* Centralizando o vídeo */
+}
+
 
 #habilidade-titulo {
     color: var(--green); /* Título em verde */
