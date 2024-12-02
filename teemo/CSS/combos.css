@@ -1,0 +1,226 @@
+/* Definindo as cores principais de Teemo */
+:root {
+    --green: #518023; /* Verde vibrante, como a selva onde Teemo vive */
+    --brown: #8b4513; /* Cor de madeira e terra */
+    --dark: #ffffff; /* Verde escuro para um toque misterioso */
+    --white: #ffffff; /* Branco para contraste */
+    --yellow: #ffd700; /* Cor dourada para destacar detalhes */
+    --gray: #808080; /* Cinza neutro para equilíbrio */
+}
+
+/* Estilo básico para o corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark);
+    color: var(--white);
+    background: url('../img/background-combos.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Garantir que o corpo ocupe toda a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden; /* Evitar rolagem horizontal */
+}
+
+/* Barra de navegação superior (menu) */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(12, 9, 9, 0.7); /* Fundo suave */
+    backdrop-filter: blur(40px); /* Efeito de desfoque */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidade com Safari */
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--green-hover);
+    color: var(--white);
+}
+
+/* Caixa de login/registro */
+.login-register-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 200;
+}
+
+.login-register-box a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-register-box a:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+/* Exibindo as informações do usuário */
+.user-info {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: var(--green);
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+}
+
+/* Avatar do Usuário */
+#user-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+    border: 2px solid var(--green);
+    transition: transform 0.3s ease;
+}
+
+#user-avatar:hover {
+    transform: scale(1.1);
+}
+
+/* Caixa de logout */
+#logout-btn {
+    background-color: var(--green);
+    color: var(--white);
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s ease;
+}
+
+#logout-btn:hover {
+    background-color: var(--green-hover);
+}
+
+/* Exibindo a caixa de login/registro ou informações do usuário */
+#login-register-box {
+    display: block;
+}
+
+#user-info {
+    display: none;
+}
+
+/* Seção de Combos */
+.combos {
+    background-color: rgba(0, 0, 0, 0.548); /* Fundo transparente e escuro */
+    padding: 30px;
+    margin-top: 80px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.combos h1 {
+    color: var(--green); /* Título em verde, remetendo à selva */
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.combos p {
+    font-size: 1.2em;
+}
+
+/* Estilo para as imagens de habilidades */
+.habilidade-img {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.habilidade-img img {
+    width: 100px; /* Reduzido para 100px */
+    height: 100px; /* Reduzido para 100px */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.habilidade-img img:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Conteúdo da habilidade */
+.conteudo {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo branco translúcido */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#habilidade-video {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#habilidade-video iframe {
+    width: 100%; /* Agora o vídeo ocupa 100% da largura disponível */
+    max-width: 80%; /* Limitando o tamanho máximo do vídeo */
+    height: 250px; /* Definindo uma altura fixa para o vídeo */
+    border-radius: 10px;
+    margin: 0 auto; /* Centralizando o vídeo */
+}
+
+#habilidade-titulo {
+    color: var(--green); /* Título em verde */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#habilidade-descricao {
+    font-size: 1.2em;
+    color: var(--brown); /* Cor marrom para a descrição */
+}
+
+/* Rodapé */
+footer {
+    background-color: rgba(44, 46, 46, 0.8);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
